@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#|KSR|course</title>
+    <link rel="stylesheet" href="{% static 'css/cource.css' %}">
+</head>
+<body text="white" >
+<form action="./python" method="get" id="python"></form>
+<form action="./django" method="get" id="django"></form>
+<form action="./datascience" method="get" id="datascience"></form>
+<form action="./bigdata" method="get" id="bigdata"></form>
+<form action="./html_css" method="get" id="html_css"></form><br><br>
+
+<br><br>
+<br><br>
+<br><br>
+{% if data2 %}
+{% for p in data2 %}
+<center><input type="image" src="{{ p.image1 }}" width="400px" height="150px" class="button" form="python">&nbsp&nbsp&nbsp&nbsp
+    <input type="image" src="{{ p.image2 }}" width="400px" height="150px" class="button" form="django"></center><br>
+<center><input type="image" src="{{ p.image3 }}" width="400px" height="150px" class="button" form="datascience">&nbsp&nbsp&nbsp&nbsp
+    <input type="image" src="{{ p.image4 }}" width="400px" height="150px" class="button" form="bigdata"></center><br>
+<center><input type="image" src="{{ p.image5 }}" width="400px" height="150px" form="html_css"></center><br><br><br><br>
+<center><b><p style="font-family: Garuda;font-size: 200%">{{ p.text1 }}</p></b></center>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#|KSR|REGISTER</title>
+    <style>
+        body{background-image: url("https://image.freepik.com/free-photo/young-smiley-girl-portrait-pointing_23-2148333062.jpg");
+        background-repeat: no-repeat;
+            background-size:cover}
+    </style>
+</head>
+<body text="black">
+<form action="./register" method="get" id="register">
+    <center><b><br><h2>Course Registration</h2><hr></b></center><br><br><br><br><br><br><br>
+<center><label for="surname">Surname :</label>
+  <input type="text" name="surname" id="surname" required>
+<label for="firstname">First name :</label>
+  <input type="text" name="firstname" id="firstname" maxlength="100" required><br><br><br><br>
+<label for="mobile">Mobile :</label>
+  <input type="text" name="mobile" id="mobile" required>
+<label for="mail">Mail id :</label>
+  <input type="text" name="mail" id="mail" required><br><br><br><br>
+<label for="dob">DOB :</label>
+  <input type="dob" name="dob" id="dob" placeholder="dd/mm/yyyy" required><br><br><br><br>
+<label for="gender">Gender :</label>
+  <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
+  <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+  <input type="radio" name="gender" id="other" value="other"><label for="other">Other</label><br><br><br><br>
+<label for="mode">Mode of class :</label>
+  <input type="radio" name="mode" id="online" value="online"> <label for="online">ONLINE</label>
+  <input type="radio" name="mode" id="offline" value="offline"><label for="offline">OFF-LINE</label><br><br><br><br>
+     <label for="cource">Select cource:</label>
+  <select name="cource" id="cource">
+    <option value="PYTHON">PYTHON</option>
+    <option value="DJANGO">DJANGO</option>
+    <option value="DATA SCIENCE">DATASCIENCE</option>
+    <option value="BIG DATA">BIGDATA</option>
+      <option value="HTML">HTML</option>
+
+  </select>
+</center>
+    </form>
+<br>
+<br>
+    <form action="./home" id="home"></form>
+  <center><input type="submit" class="button" value="Register" form="register">
+  <input type="submit" class="button" value="Home" form="home"></center>
+</body>
+</html>

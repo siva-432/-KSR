@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Python
+    </title>
+    <link rel="stylesheet" href='{% static 'css/python.css' %}'>
+    <style>
+        .button{background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 8%;
+	height:5%}
+    </style>
+</head>
+<body>
+<form action="./book" method="get" id="form1"></form>
+{% if data3 %}<font color="red" ><marquee behavior="scroll" direction="right" scrollamount="8"><b>** Hurry up only few seats are remaining !!</b></marquee></font><br>
+   click on Register for Course Registration----------> <input type="submit" class="button" value="Register" form="form1">
+{% for i in data3 %}
+<h1>{{ i.pname }}</h1><br>
+{{ i.text2 }}
+{% endfor %}
+{% endif %}<br>
+<img src="https://image.slidesharecdn.com/pythonbrochure2-170504102111/95/python-training-in-bangalore-python-course-brochure-learnbay-3-638.jpg?cb=1494385743" width="35%" height="800px">
+</body>
+</html>

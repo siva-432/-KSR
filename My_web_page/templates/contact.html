@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#|KSR|contact</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <style>body{background-image: url('https://images.unsplash.com/photo-1604257206295-cef0385a32dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+background-repeat: no-repeat;
+background-size: cover;}</style>
+</head>
+<body text="yellow"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center><h1><u><b>CONTACT</b></u><br><br>
+    {% if data1 %}
+    {% for i in data1 %}
+        {{ i.text1 }}<br><br>Mail : {{ i.mail }}<br><br>Mobile : {{ i.mobile }}
+    {% endfor %}
+    {% endif %}<br></h1></center>
+
+</body>
+</html>

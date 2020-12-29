@@ -1,0 +1,21 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+    <link rel="stylesheet" href="{% static 'css/html_css.css' %}">
+</head>
+<body text='yellow'>
+<form action="./book" method="get" id="form1"></form>
+{% if data7 %}<font color="red" ><marquee behavior="scroll" direction="right" scrollamount="8"><b>** Hurry up only few seats are remaining !!</b></marquee></font><br>
+   click on Register for Course Registration----------> <input type="submit" class="button" value="Register" form="form1">
+{% for i in data7 %}
+<h1>{{ i.Hname }}</h1><br>
+{{ i.text6 }}
+{% endfor %}
+{% endif %}<br>
+</center>
+<h2>Outline</h2><br>
+<img src="https://image.slidesharecdn.com/websyllabus-101224004116-phpapp01/95/web-designing-syllabus-4-728.jpg?cb=1293151331">
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bigdata</title>
+    <link rel="stylesheet" href='{% static 'css/bigdata.css' %}'>
+</head>
+<body text="white">
+<form action="./book" method="get" id="form1"></form>
+{% if data %}<font color="red" ><marquee behavior="scroll" direction="right" scrollamount="8"><b>** Hurry up only few seats are remaining !!</b></marquee></font><br>
+   click on Register for Course Registration----------> <input type="submit" class="button" value="Register" form="form1">
+{% for i in data%}
+<h1>{{ i.Bname }}</h1><br>
+{{ i.text5 }}
+{% endfor %}
+{% endif %}<br>
+<h1>Outline</h1><br>
+<img src="https://www.kdnuggets.com/wp-content/uploads/the-8-vs-of-big-data.png" width="40%">
+</body>
+</html>

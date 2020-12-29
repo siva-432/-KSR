@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#|KSR|about</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <style>
+        body{background-image: url('https://images.unsplash.com/photo-1607500321257-c80439b426f0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80');
+background-repeat: no-repeat;
+background-size: cover;}
+        .button{background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 10%;
+	height:5%}
+
+    </style>
+</head>
+<body>
+<form action="./home" method="get">
+
+<CENTER><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% if data %}
+    {% for p in data %}
+        <p style="font-family:Verdana"><i><font  color="white" size="5">{{ p.text }} </font><br>
+        </i><b><font color="red" size="6"> " KSR " </font></b></p></center></p><br>
+    {% endfor %}
+{% endif %}
+<center><input type="submit" class ='button' value=" Go to Home"></input></center>
+    </form>
+</body>
+</html>

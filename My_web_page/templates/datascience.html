@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Datascience
+    </title>
+    <link rel="stylesheet" href="{% static 'css/datascience.css' %}">
+    <style>
+        body{background-image: url('https://cdn.admissiontable.com/wp-content/uploads/machine_learning_data_science-1.png');
+background-repeat: no-repeat;
+background-size: cover;}
+        .button{background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 8%;
+	height:5%}
+
+    </style>
+</head>
+<body text="black">
+<form action="./book" method="get" id="form1"></form>
+{% if data5 %}<font color="#ff1493" ><marquee behavior="scroll" direction="right" scrollamount="8"><b>** Hurry up only few seats are remaining !!</b></marquee></font><br>
+   click on Register for Course Registration----------> <input type="submit" class="button" value="Register" form="form1">
+{% for i in data5 %}
+<h1>{{ i.Dname }}</h1><br>
+{{ i.text4 }}
+{% endfor %}
+{% endif %}
+<br><br>
+<img src="https://image.slidesharecdn.com/datasciencehierarchyofneeds-180620192119/95/data-science-hierarchy-of-needs-1-638.jpg?cb=1529526914">
+</body>
+</html>

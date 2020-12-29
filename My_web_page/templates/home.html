@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<p lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>#|KSR</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+<form action="./about" method="get" id="about"></form>
+<form action="./cource" method="get" id="course"></form>
+<form action="./contact" method="get" id="contact"></form>
+
+<center><image src="{% static 'images/ksr_logo.png' %}"></image><br>
+<input type="submit" class ='button' value="About" form="about"></input>
+    <input type="submit" class ='button' value="Courses" form="course"></input>
+    <input type="submit" class ='button' value="Contact" form="contact"></input><br><br>
+<img src="{% static 'images/wel.png' %}" >
+
+
+</center>
+
+</body>
+</html>

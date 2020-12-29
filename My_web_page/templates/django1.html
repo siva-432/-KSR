@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>django</title>
+    <link rel="stylesheet" href="{% static 'css/django1.css' %}">
+     <style>
+        .button{background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 8%;
+	height:5%}
+    </style>
+</head>
+<body >
+<form action="./book" method="get" id="form1"></form>
+{% if data4 %}<font color="red" ><marquee behavior="scroll" direction="right" scrollamount="8"><b>** Hurry up only few seats are remaining !!</b></marquee></font><br>
+   click on Register for Course Registration----------> <input type="submit" class="button" value="Register" form="form1">
+{% for i in data4 %}
+<h1>{{ i.dname }}</h1><br>
+{{ i.text3 }}
+{% endfor %}
+{% endif %}<br>
+<br><img src="https://miro.medium.com/max/1032/1*HvknYpijUJwiaHuJ1HUiLw.png" width="40%" height="500px"><br><br>
+</body>
+</html>
